@@ -1,0 +1,94 @@
+body {
+    margin:0 auto;
+    background-color: #eee;
+    z-index: 0;
+}
+
+
+#game {
+    display: grid;
+    grid-template-rows: 300px 300px 300px;
+    grid-template-columns: 300px 300px 300px;
+    justify-content: center;
+
+}
+
+.row {
+    background-color: #eee;
+}
+.casilla{
+    width: 1.3em;
+    height: 1.3em;
+    border-radius:1em;
+    background-color: white;
+    cursor: pointer;
+    margin: 20px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+    font-family: 'Chivo', sans-serif;
+    color:white;
+    font-size: 200px;
+    
+}
+.casilla:focus{
+    outline: none;
+}
+.casilla:hover{
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+.casilla:active{
+    background-image: linear-gradient(to right, #6253e1, #852D91, #A3A1FF, #F24645);
+    box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+}
+
+.result{
+    opacity:0.8;
+    background: rgb(34,193,195);
+    background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(141,45,253,1) 100%);
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    z-index:1000;
+    text-align:center;
+    font-family: 'Chivo', sans-serif;
+    font-size: 100px;
+    padding-top: 2em;
+    display:visible;
+}
+.winner-overlay{
+    opacity:0.8;
+    background: rgb(34,193,195);
+    background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(141,45,253,1) 100%);
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    z-index:1000;
+    text-align:center;
+    font-family: 'Chivo', sans-serif;
+    font-size: 100px;
+    padding-top: 2em;
+    display:none;
+}
+#aistarter, #twopstarter {
+    color:black;
+    transition: color 0.5s ease;
+}
+#aistarter:hover, #twopstarter:hover{
+    color:white;
+}
